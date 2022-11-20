@@ -19,6 +19,22 @@ print("Hello", firstName, lastName + "!") # print is displaying THREE strings
 print("The value of a number is: ", 10) # print converts 10 to str and then combines and displays
 print("The value of a number is: " + "10")
 
+# Instead of typing print for multiple lines,
+print("Menu:")
+print("1. Addition")
+print("2. Subtraction")
+print("3. Multiplication")
+print("4. Division")
+
+# we can use a multi-line string
+print("""
+Menu:
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+""")
+
 # Asking for user's input (input always gives you a str)
 name = input("What is your name?\n")
 print("Hello", name)
