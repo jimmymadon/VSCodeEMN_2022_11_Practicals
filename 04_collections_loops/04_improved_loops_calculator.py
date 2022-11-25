@@ -1,21 +1,28 @@
-print("""
-Menu:
-1. Addition
-2. Subtraction
-3. Multiplication
-4. Division
-""")
-menuOption = input("Please enter a option between 1 and 4...\n")
+# If a user types an invalid option, show the menu again
 
-if not menuOption.isnumeric():
-    print("Please enter a valid digit!")
-    exit()
+# This is an example of an inifite while loop.
+# It will keep running forever until you break somewhere.
+while True:
+    print("""
+    Menu:
+    1. Addition
+    2. Subtraction
+    3. Multiplication
+    4. Division
+    """)
+    menuOption = input("Please enter a option between 1 and 4...\n")
 
-menuOption = int(menuOption)
+    if not menuOption.isnumeric():
+        print("Please enter a valid digit!")
+        continue # If we reach this line, we go to the beginning of the loop
 
-if menuOption > 4 or menuOption < 1:
-    print("Please enter a valid option!")
-    exit()
+    menuOption = int(menuOption)
+
+    if menuOption > 4 or menuOption < 1:
+        print("Please enter a valid option!")
+        continue # If we reach this line, we go to the beginning of the loop
+
+    break # If we reach this line, we will exit the loop
 
 # Ask the user for 2 numbers and store them in 2 variables
 number1 = float(input("Enter the first number: "))
